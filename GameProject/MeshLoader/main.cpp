@@ -288,7 +288,7 @@ int main( )
     glUniform1i( glGetUniformLocation( shader.Program, "material.specular" ), 1 );
     
 //    obstacles[0].Draw(shader, glm::vec3(0.0f,2.0f,0.0f));
-    player->Draw(shader,glm::vec3(0.0f,1.0f,75.0f),camera.GetPosition());
+    player->Draw(shader,glm::vec3(0.0f,1.0f,199.0f),camera.GetPosition());
     
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -358,7 +358,7 @@ int main( )
                 if(player->GetLife()>-1){
                     player->Collect(objects);
                     player->RunPhysics(*obj1,deltaTime);
-//                    player->Move(deltaTime);
+                    player->Move(deltaTime);
                     camera.FollowObject(*player);
                     if(surface_mins[2]*obj1->GetSize().z + 5 > player->GetPosition().z){
                         gameover = true;
@@ -387,7 +387,8 @@ void DoMovement(Player &player)
 {
     // Camera controls
     if ( keys[GLFW_KEY_W] || keys[GLFW_KEY_UP] ){
-        player.Move(GO_FORWARD,deltaTime);
+//        player.Move(GO_FORWARD,deltaTime);
+        player.SetVelocity(3.0);
     }
     
     if ( keys[GLFW_KEY_S] || keys[GLFW_KEY_DOWN] ){

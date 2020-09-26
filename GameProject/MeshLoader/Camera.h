@@ -24,7 +24,7 @@ enum Camera_Movement
 
 // Default camera values
 const GLfloat YAW        = -90.0f;
-const GLfloat PITCH      =  -45.0f;
+const GLfloat PITCH      =  -30.0f;
 const GLfloat SPEED      =  6.0f;
 const GLfloat SENSITIVTY =  0.25f;
 const GLfloat ZOOM       =  45.0f;
@@ -64,7 +64,7 @@ public:
         glm::vec3 p_position = player.GetPosition();
         
         this->position.x = p_position.x;
-        this->position.y = p_position.y + 10.0f;
+        this->position.y = p_position.y + 5.0f;
         this->position.z = p_position.z + 7.0f;
     }
 
