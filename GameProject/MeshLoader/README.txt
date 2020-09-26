@@ -1,0 +1,1 @@
+Hello all :) Thanks for trying my game which I coded when I was in college. It has some bugs as you, the player, can notice. It was my first 3D coded game which was a great challenge. Good luck and have fun playing it :) You as the player need to link some libraries which are already in the folder. After that, VOILA :D
